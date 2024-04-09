@@ -8,6 +8,8 @@ import million from 'million/compiler';
 import { handlebars } from "./plugins/handlebars";
 import { PluginOption, loadEnv, splitVendorChunkPlugin } from "vite";
 import { visualizer } from "rollup-plugin-visualizer";
+import proxy from 'vite-plugin-proxy'; // Add this import
+
 
 import tailwind from "tailwindcss";
 import rtl from "postcss-rtlcss";
@@ -37,6 +39,16 @@ export default defineConfig(({ mode }) => {
           env,
         },
       }),
+      proxy({
+              '/api': {
+                target: env.VITE_BACKEND_URL, // Your backend URL
+                changeOrigin: true,
+                headers: {
+                  'Access-Control-Allow-Origin': '*', // Set desired CORS headers
+                  // Add other CORS headers if needed
+                },
+              },
+            }),
       react({
         babel: {
           presets: [
