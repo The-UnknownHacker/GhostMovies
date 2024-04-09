@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to GhostMovies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #292929;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #6a1b9a;
+        }
+        .container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .welcome-text {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #6f418b;
+        }
+        .watch-button {
+            background-color: rgba(106, 27, 154, 0.7); /* Purple color with transparency */
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            transition: background-color 0.3s, opacity 0.3s;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .watch-button:hover {
+            background-color: rgba(106, 27, 154, 0.9); /* Slightly less transparent on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div><a href="/">GhostMovies</a></div>
+        <div>
+            <a href="/login">Login to Your Account</a>
+            <a href="/signup">Signup</a>
+            <a href="/logout">Logout</a>
+            <a href="/watch">Watch</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="welcome-text">
+            Welcome to GhostMovies - Your Unlocked Movie Experience!<br>
+            Watch ANY movie you want, ANYTIME, ANYWHERE! No subscription required!<br>
+            Just a simple login and you're good to go, All For FREE!
+        </div>
+        <a href="/watch" class="watch-button">Watch!</a>
+    </div>
+    
+</body>
+</html>
