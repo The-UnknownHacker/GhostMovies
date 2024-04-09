@@ -2,6 +2,13 @@
 GhostMovies is a mirror of [Movie-Web](https://github.com/movie-web/movie-web) with some changes...
 The Official instance of GhostMovies can be found at [GhostMovies](https://movies.ghostai.me)
 
+# Structure
+
+This project works in 2 ways
+1 - The Backend is the actual GhostMovies service serving the ui frontend
+2 - The frontend or login system. This system prevents abuse of the project
+ - To get this project setup you will have to run the backend as shown below then run the frontend using the frontend instruction below
+
 **I *do not* endorse piracy of any kind I simply enjoy programming and large user counts.**
 
 
@@ -27,7 +34,7 @@ The Official instance of GhostMovies can be found at [GhostMovies](https://movie
 
 
 ## Running Locally
-Type the following commands into your terminal / command line to run GhostMovies locally
+Type the following commands into your terminal / command line to run The GhostMovies Backend Locally
 ```bash
 git clone https://github.com/The-UnknownHacker/GhostMovies/
 cd GhostMovies
@@ -36,4 +43,21 @@ pnpm install
 pnpm run dev
 ```
 Then you can visit the local instance [here](http://localhost:5173) or, at local host on port 5173, or at 127.0.0.1:5173
+Or 
+You can host the frontend with the login system
+
+## Hosting the Frontend
+Type the following commands into your terminal / command line to run The GhostMovies Frontend Locally
+**You need to already be hosting the backend for this to work Otherwise it won't work**
+```bash
+cd GhostMovies
+git pull
+pip install Flask Flask-Login Werkzeug
+python main.py or python3 main.py
+```
+Then you can visit the final instance [here](http://localhost:5000) or, at local host on port 5000, or at 127.0.0.1:5000
+
+
+
+
 
