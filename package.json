@@ -2,7 +2,7 @@
   "name": "ghostmovies",
   "version": "4.7.0",
   "private": true,
-  "homepage": "https://github.com/sussy-code/smov",
+  "homepage": "https://github.com/The-UnknownHacker/GhostMovies",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -71,7 +71,8 @@
     "semver": "^7.6.0",
     "slugify": "^1.6.6",
     "subsrt-ts": "^2.1.2",
-    "zustand": "^4.5.2"
+    "zustand": "^4.5.2",
+    "next": "^13.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
@@ -130,7 +131,8 @@
     "vite-plugin-pwa": "^0.17.5",
     "vite-plugin-static-copy": "^1.0.3",
     "vitest": "^1.5.2",
-    "workbox-window": "^7.1.0"
+    "workbox-window": "^7.1.0",
+    "rollup": "npm:@rollup/wasm-node@4.18.0" // Added the compatible version of rollup here
   },
   "pnpm": {
     "overrides": {
@@ -138,7 +140,8 @@
       "postcss@<8.4.31": ">=8.4.31",
       "@babel/traverse@<7.23.2": ">=7.23.2",
       "crypto-js@<4.2.0": ">=4.2.0",
-      "rollup": "npm:@rollup/wasm-node"
+      "rollup": "npm:@rollup/wasm-node@4.18.0" // Updated override to match the rollup version used
     }
   }
 }
+
